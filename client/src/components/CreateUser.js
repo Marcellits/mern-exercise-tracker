@@ -3,9 +3,10 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import axios from 'axios';
 
-let history = useHistory();
 
 const CreateUser = () => {
+  let history = useHistory();
+
     const [username, setUsername] = useState('');
     const changeUsername = e => {
         setUsername(e.target.value)
