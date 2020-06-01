@@ -1,6 +1,9 @@
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import axios from 'axios';
+
+let history = useHistory();
 
 const CreateUser = () => {
     const [username, setUsername] = useState('');
@@ -16,6 +19,7 @@ const CreateUser = () => {
         axios.post('http://localhost:5000/users/add', newUser)
         .then(res => console.log(res.data));
         setUsername('')
+        history.push("/");
       }
   return (
     <div>

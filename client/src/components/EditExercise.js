@@ -58,7 +58,7 @@ useEffect(() => {
         exercise
       )
       .then((res) => console.log(res.data))
-    history.push("/home");
+    history.push("/");
   };
 
   return (
